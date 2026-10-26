@@ -1,0 +1,12 @@
+{
+  "guid": "09612e52-0f93-41ab-a6ab-5a19479f5315",
+  "name": "Smart Collections",
+  "overview": "Smart Collections from tags, with suggested collections",
+  "description": "Personal build of johnpc/jellyfin-plugin-smart-collections that adds suggested collections from the most common tags, genres and tag pairs.",
+  "owner": "furyetti",
+  "category": "General",
+  "targetAbi": "12.0.0.0",
+  "upstream": "https://github.com/johnpc/jellyfin-plugin-smart-collections",
+  "license": "MIT",
+  "changes": "Suggested collections from the most common tags, genres and tag pairs; admin-only plugin API"
+}

@@ -1,0 +1,30 @@
+name: Validate catalog
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check generated files are current
+        run: python3 scripts/catalog.py build --check
+      - name: Check every listed zip downloads and matches its checksum
+        run: |
+          python3 - <<'EOF'
+          import hashlib, json, sys, urllib.request
+          bad = 0
+          for plugin in json.load(open("manifest.json")):
+              for v in plugin["versions"]:
+                  data = urllib.request.urlopen(v["sourceUrl"]).read()
+                  actual = hashlib.md5(data).hexdigest()
+                  ok = actual == v["checksum"]
+                  bad += not ok
+                  print(f"{'ok ' if ok else 'BAD'} {plugin['name']} {v['version']} {actual}")
+          sys.exit(1 if bad else 0)
+          EOF
