@@ -1,7 +1,20 @@
 # jellyfin-plugins
 
-Personal Jellyfin plugin catalog. It holds only built plugins and the catalog
-manifest; source code lives in private repositories.
+A [Jellyfin](https://jellyfin.org) plugin repository. Add its URL to a Jellyfin
+server and the plugins below show up in the server's plugin catalog, where they
+install and update like any other plugin.
+
+**This repo only distributes builds.** It contains the catalog manifest
+Jellyfin reads, the built plugin zips (as GitHub releases), and the licenses
+those plugins are redistributed under. The source code for these builds is
+kept in private repositories and is not published here.
+
+These are personal builds, mostly modified versions of existing open-source
+plugins, made for my own servers. They're public only because Jellyfin can't
+log in to download a catalog. You're welcome to use them, but they come
+without support or warranty, and they aren't affiliated with or endorsed by
+the original plugin authors. For an upstream plugin's official version or to
+report its bugs, use the upstream repository linked in the table below.
 
 ## Add to Jellyfin
 
@@ -52,6 +65,6 @@ Create `plugins/<slug>/plugin.json` and `plugins/<slug>/LICENSE`, run
 
 ## What belongs here
 
-This repo is public. Only built artifacts, catalog metadata and the licenses
-they require go here: never source code from private repositories, secrets,
-or anything personal.
+Because this repo is public, only built artifacts, catalog metadata and the
+licenses they require go here: never source code from the private
+repositories, secrets, or anything personal.
