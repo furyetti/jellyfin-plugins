@@ -1,0 +1,20 @@
+[
+  {
+    "guid": "09612e52-0f93-41ab-a6ab-5a19479f5315",
+    "name": "Smart Collections",
+    "overview": "Smart Collections from tags, with suggested collections",
+    "description": "Personal build of johnpc/jellyfin-plugin-smart-collections that adds suggested collections from the most common tags, genres and tag pairs.",
+    "owner": "furyetti",
+    "category": "General",
+    "versions": [
+      {
+        "version": "0.0.0.26",
+        "changelog": "https://github.com/furyetti/jellyfin-plugins/releases/tag/smart-collections-0.0.0.26",
+        "targetAbi": "12.0.0.0",
+        "sourceUrl": "https://github.com/furyetti/jellyfin-plugins/releases/download/smart-collections-0.0.0.26/smart-collections-0.0.0.26.zip",
+        "checksum": "d18a7fb7e1836a30633625b6d9391023",
+        "timestamp": "2026-10-26T00:09:54Z"
+      }
+    ]
+  }
+]
